@@ -37,13 +37,13 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   var buffer = '', stack1, helper, options;
-  data.buffer.push("\n  <tr>\n    <td><h3>");
+  data.buffer.push("\n  <tr>\n    <td><h4>");
   stack1 = helpers._triageMustache.call(depth0, "product.name", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</h3></td>\n    <td><h3>QTY:");
+  data.buffer.push("</h4></td>\n    <td><h4>QTY:");
   stack1 = helpers._triageMustache.call(depth0, "quantity", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</h3><br></td>\n    <td><button type=\"button\" class=\"btn btn-default btn-xsm\" ");
+  data.buffer.push("</h4><br></td>\n    <td><button type=\"button\" class=\"btn btn-default btn-xsm\" ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "more", "", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0,depth0],types:["STRING","ID"],data:data})));
   data.buffer.push("><span class=\"glyphicon glyphicon-plus\"></span></button></td>\n    <td><button type=\"button\" class=\"btn btn-default btn-xsm\" ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "less", "", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0,depth0],types:["STRING","ID"],data:data})));
@@ -53,12 +53,12 @@ function program1(depth0,data) {
   return buffer;
   }
 
-  data.buffer.push("HERE IS YOUR CART.<br>\n<table class=\"table table-striped\">\n  <tr>\n    <th>DIY Tutorial</th>\n    <th>Quantity</th>\n    <th></th>\n    <th></th>\n    <th>Price</th>\n  </tr>\n  ");
+  data.buffer.push("HERE IS YOUR CART:\n<br>\n<table class=\"table table-striped\">\n  <tr>\n    <th>DIY Tutorial</th>\n    <th>Quantity</th>\n    <th></th>\n    <th></th>\n    <th>Price</th>\n  </tr>\n  ");
   stack1 = helpers.each.call(depth0, "items", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n  <tr>\n    <td>TOTAL: $");
+  data.buffer.push("\n  <tr>\n    <td></td>\n    <td></td>\n    <td></td>\n    <td></td>\n    <td><h4>TOTAL: $");
   data.buffer.push(escapeExpression((helper = helpers['format-price'] || (depth0 && depth0['format-price']),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "total", options) : helperMissing.call(depth0, "format-price", "total", options))));
-  data.buffer.push("</td>\n  </tr>\n  </tbody>\n</table>");
+  data.buffer.push("</h4></td>\n  </tr>\n  </tbody>\n</table>");
   return buffer;
   
 });
