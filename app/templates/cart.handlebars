@@ -1,12 +1,23 @@
 HERE IS YOUR CART.<br>
-
-{{# each items }}
-  <h3>{{ this.product.name }}</h3>
-      QTY:{{ this.quantity}}<br>
-    <button type="button" class="btn btn-default btn-xsm" {{ action "more" this }}><span class="glyphicon glyphicon-plus"></span></button>
-    <button type="button" class="btn btn-default btn-xsm" {{ action "less" this }}><span class="glyphicon glyphicon-minus"></button>
-    <h4>Price: ${{ format-price this.product.price }}</h4>
-  <br>
-{{/ each }}
-TOTAL:
-${{ format-price this.total }}
+<table class="table table-striped">
+  <tr>
+    <th>DIY Tutorial</th>
+    <th>Quantity</th>
+    <th></th>
+    <th></th>
+    <th>Price</th>
+  </tr>
+  {{# each items }}
+  <tr>
+    <td><h3>{{ this.product.name }}</h3></td>
+    <td><h3>QTY:{{ this.quantity}}</h3><br></td>
+    <td><button type="button" class="btn btn-default btn-xsm" {{ action "more" this }}><span class="glyphicon glyphicon-plus"></span></button></td>
+    <td><button type="button" class="btn btn-default btn-xsm" {{ action "less" this }}><span class="glyphicon glyphicon-minus"></button></td>
+    <td><h4>Price: ${{ item-subtotal this.product.price quantity }}</h4></td>
+  </tr>
+  {{/ each }}
+  <tr>
+    <td>TOTAL: ${{ format-price this.total }}</td>
+  </tr>
+  </tbody>
+</table>
