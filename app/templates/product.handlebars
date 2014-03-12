@@ -1,6 +1,6 @@
 <h1>
   {{ name }}
-  <small class='muted'>({{price }} dollars )</small>
+  <small class='muted'>${{ format-price price }}<br></small>
 </h1>
 
 <div class='row'>
@@ -8,6 +8,7 @@
     <img {{ bind-attr src=image }} class='thumbnail col-lg-12' />
   </div>
   <div class='col-lg-4'>
-    {{ description }}
+    {{ description }} <br>
+    <button href=“#” {{action "addToCart" }}>Add To Cart</button>
   </div>
 </div>

@@ -1,5 +1,21 @@
+<div class='row'>
+  <div class='col-lg-2'>
+    {{# link-to "products" }}
+    <h2>Products</h2>
+    {{/ link-to }}
+    <h2>About Us</h2>
+    <h2>Checkout</h2>
 
-{{# link-to "products" }}
-<h2>Products</h2>
-{{/ link-to }}
+  </div>
+  <div class='col-lg-8'>
+    {{# each }}
+    {{# link-to "product" this }}
+      <img {{ bind-attr src=image }} height="150" width= "150" class="img-thumbnail" />
+
+    {{/ link-to }}
+    <span class="phototext">${{ format-price price }}</span>
+    {{/ each }}
+
+  </div>
+</div>
 

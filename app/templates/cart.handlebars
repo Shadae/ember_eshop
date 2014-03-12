@@ -1,0 +1,12 @@
+HERE IS YOUR CART.<br>
+
+{{# each items }}
+  <h3>{{ this.product.name }}</h3>
+      QTY:{{ this.quantity}}<br>
+    <button type="button" class="btn btn-default btn-xsm" {{ action "more" this }}><span class="glyphicon glyphicon-plus"></span></button>
+    <button type="button" class="btn btn-default btn-xsm" {{ action "less" this }}><span class="glyphicon glyphicon-minus"></button>
+    <h4>Price: ${{ format-price this.product.price }}</h4>
+  <br>
+{{/ each }}
+TOTAL:
+${{ format-price this.total }}

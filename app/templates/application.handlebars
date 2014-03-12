@@ -2,7 +2,10 @@
   {{# link-to "home" }}
   <h1>Rainy Dae | DIY Store</h1>
   {{/ link-to }}
-  <p class='lead'>It's raining? Learn how to make a rainy day craft.</p>
+  {{# link-to "cart" }}
+  <h4 class="text-right">Cart | <span class="glyphicon glyphicon-shopping-cart"></span></h4>
+  {{/ link-to }}
+  <span class='lead'>It's raining? Learn how to make a rainy day craft.</span>
   <hr>
   {{outlet}}
 

@@ -14,9 +14,10 @@
   </div>
   <div class='col-lg-10'>
     {{ outlet }}
+    <hr>
     {{# each }}
     {{# link-to "product" this }}
-    <img {{ bind-attr src=image }} height="150" width= "150" class="img-thumbnail" />
+    <img {{ bind-attr src=avatar }} height="200" width= "200" class="img-thumbnail" />
     {{/ link-to }}
     {{/ each }}
   </div>
