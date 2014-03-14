@@ -1,17 +1,46 @@
 
 .phototext {
-   position: relative;
-   top: 35px;
-   left: -145px;
-   width: 100px;
-   background-color: silver;
-   font-size: 20px;
-   border-radius: 5px;
+  position: relative;
+  top: 35px;
+  left: -145px;
+  width: 100px;
+  background-color: silver;
+  font-size: 20px;
+  border-radius: 5px;
+  font-family: 'Lobster', Georgia, Times, serif;
+  color: #3366FF;
 }
+
+
+
 .img-thumbnail{
   border-radius: 20px;
 }
 
 .thumbnail{
   border-radius: 50px;
+}
+
+#ember390, #ember392 {
+  width: 2em;
+}
+
+h1 {
+    font-family: 'Lobster', Georgia, Times, serif;
+    font-size: 70px;
+    line-height: 100px;
+}
+
+body {
+  background-image: url('http://www.vectortiles.com/wp-content/uploads/raindrop-seamless-patterns-03.jpg');
+  background-attachment: fixed;
+}
+
+.container {
+  background: white;
+  min-height: 900px;
+  margin-top: 100px;
+  border-style: solid;
+  border-width: 15px;
+  border-color: grey;
 }
