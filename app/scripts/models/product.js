@@ -5,7 +5,6 @@ App.Product = DS.Model.extend({
   description: DS.attr("string"),
   price: DS.attr("integer"),
   item: DS.belongsTo('item', { async: true })
-  // createdAt:DS.attr("date")
 });
 
 App.Product.FIXTURES = [
