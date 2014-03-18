@@ -7,6 +7,7 @@ This is your admin dashboard!
      <ul class='list-unstyled'>
       {{# each }}
       {{# if this.name }}
+      <button {{ action 'deleteProduct' this }}>Delete this product</button>
       <li> {{# link-to "productEdit" this }}
         {{ name }} ${{ format-price price }} <br>
          <img {{ bind-attr src=avatar }} width="50px", height="50px;" class='thumbnail col-lg-16' />

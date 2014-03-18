@@ -1,11 +1,2 @@
-Product name: {{ input value=name }}
-<br>
-Product Price: {{ input value=price }} (in cents, please!)
-<br>
-Product description: {{ textarea value=description rows=10 cols=100 }}
-<br>
-Product image url: {{ textarea value=image rows=1 cols=100}}
-<br>
-Product avatar url: {{ textarea value=avatar rows=1 cols=100 }}
-<br>
+{{ partial "productForm" }}
 <button {{ action "createProduct" this }}>Save!</button>

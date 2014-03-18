@@ -3,6 +3,7 @@ App.Router.map(function(){
   this.resource("cart");
   this.resource("item");
   this.resource("checkout");
+  this.resource("confirmation", { path: ":checkout_id" });
   this.resource("products", function () {
     this.resource("product", { path: ":product_id" });
   });
