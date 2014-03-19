@@ -8,15 +8,15 @@ App.Item = DS.Model.extend({
   }.property('quantity', 'this.product.price')
 });
 
-App.Item.FIXTURES = [
-  {
-    id: 1,
-    product: 1,
-    quantity: 1
-  },
-    {
-    id: 2,
-    product: 2,
-    quantity: 1
-  }
-]
+// App.Item.FIXTURES = [
+//   {
+//     id: 1,
+//     product: 1,
+//     quantity: 1
+//   },
+//     {
+//     id: 2,
+//     product: 2,
+//     quantity: 1
+//   }
+// ]

@@ -3,10 +3,9 @@ App.CheckoutRoute = Ember.Route.extend({
     checkout: function(proxy) {
       var checkout = this.store.createRecord("checkout", proxy);
       this.store.find('cart', localStorage.cartId).then(function(cart) {
-        checkout.set('cart', cart)
+        checkout.set('cart', cart);
+        checkout.save();
       })
-
-      checkout.save();
       this.transitionTo("confirmation", checkout);
 
       // function(error) {
