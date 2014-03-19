@@ -20,15 +20,23 @@ App.CartRoute = Ember.Route.extend({
    }
   },
 
-  removeFromCart: function(item) {
-      this.store.find("cart", localStorage.cartId).then(function(cart){
-        cart.get("items").then(function(items) {
-          items.removeObject(item);
-          item.deleteRecord();
-          item.save();
-        });
-    });
-  },
+  // removeFromCart: function(item) {
+  //     this.store.find("cart", localStorage.cartId).then(function(cart){
+  //       cart.get("items").then(function(items) {
+  //         items.removeObject(item);
+  //         item.deleteRecord();
+  //         item.save();
+  //       });
+  //   });
+  // remove: function(item) {
+  //   this.store.find("cart").then(function (cart){
+  //     cart.get("items").then(function(items){
+  //       items.removeObject(item)
+  //       item.save()
+  //     })
+  //   });
+  // },
+
   model: function() {
     return this.store.find('cart', localStorage.cartId)
 
