@@ -1,11 +1,32 @@
 
-  <table>
-    <tr><td>Name:</td> <td>{{ input type="text" value=name }}</td>
-    <td>Email:</td> <td>{{ input type="text" value=email }}</td></tr><tr/ class='gap'>
-    <tr><td>Credit Card Number:</td> <td>{{ input type="text" value=credit-card-number }}</td>
-    <td>CVV:</td> <td>{{ input type="number" value=cvv }}</td></tr>
-    <tr><td>Expiration Date:</td> <td>{{ input type="text" value=expiration }}</td></tr><tr/ class='gap'>
-    <tr><td>Address:</td> <td>{{ input type="text" value=address }}</td>
-    <td>Zipcode:</td> <td>{{ input type="text" value=zip }}</td></tr>
-  </table>
-<button {{ action 'checkout' this }}>Buy!</button>
+<form role="form_billing">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    {{ input type="text" value=name class="form-control" }}
+  </div>
+  <div class="form-group">
+    <label for="email">Email:</label>
+    {{ input type="text" value=email class="form-control"}}
+  </div>
+  <div class="form-group">
+    <label for="cc">Credit Card Number:</label>
+    {{ input type="text" value=credit-card-number class="form-control" }}
+  </div>
+  <div class="form-group">
+    <label for="cvv">CVV:</label>
+    {{ input type="number" value=cvv class="form-control" }}
+  </div>
+  <div class="form-group">
+    <label for="exp_date">Expiration Date:</label>
+    {{ input type="text" value=expiration class="form-control" }}
+  </div>
+  <div class="form-group">
+    <label for="address">Address:</label>
+    {{ input type="text" value=address class="form-control" }}
+  </div>
+  <div class="form-group">
+    <label for="name">Zipcode:</label>
+    {{ input type="text" value=zip class="form-control"}}
+  </div>
+  <button {{ action 'checkout' this }} class="btn btn-default">Buy!</button>
+</form>
