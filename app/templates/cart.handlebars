@@ -5,6 +5,7 @@ HERE IS YOUR CART:
     <th>DIY Tutorial</th>
     <th>Quantity</th>
     <th></th>
+    <th></th>
     <th>Price</th>
   </tr>
   {{# each items }}
@@ -21,16 +22,22 @@ HERE IS YOUR CART:
         </button>
       </div>
     </td>
+    <td><button type="button" class="btn btn-danger btn-xsm" {{ action "remove" this }}>
+      remove
+      </button>
+    </td>
     <td><h4>${{ item-subtotal this.product.price quantity }}</h4></td>
   </tr>
   {{/ each }}
   <tr>
     <td></td>
     <td></td>
+    <td></td>
     <td>TOTAL: </td>
     <td><h4>${{ format-price this.total }}</h4></td>
   </tr>
   <tr>
+    <td></td>
     <td></td>
     <td></td>
     <td></td>

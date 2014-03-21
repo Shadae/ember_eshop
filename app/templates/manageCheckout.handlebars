@@ -1,0 +1,26 @@
+<br>
+<ul class='list-unstyled'>
+  {{# each }}
+    <li>
+      {{# link-to "confirmation" this }}Order #{{ id }}{{/ link-to}}<br>
+      Name: {{ name }}<br>
+      Status: {{ status }} <br>
+      <label for="status">Change Status:</label>
+      {{ input type="text" value=status class="form" }}
+      <button {{ action 'checkout' this }} class="btn btn-default">Change!</button>
+    </li>
+  {{/ each }}
+</ul>
+
+
+
+<!-- <div class="btn-group">
+        <button type="button" class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
+          change
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role= "menu">
+          <li>Paid link</li>
+          <li>Cancelled link</li>
+        </ul>
+      </div> -->
